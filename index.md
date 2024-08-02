@@ -38,7 +38,7 @@ For your second milestone, explain what you've worked on since your previous mil
 - Technical details of what you've accomplished and how they contribute to the final goal: I have connected the ArduCam to the Raspberry Pi.
 - What has been surprising about the project so far: Something that really suprised me was that the camera was really easy to connect and worked the first time.
 - Previous challenges you faced that you overcame: I had to find the perfect distance to be able to view the image with good accuracy.
-- What needs to be completed before your final milestone 
+- What needs to be completed before your final milestone: I need to add the better camera in along with importing Open AI to be able to run the output through Chat GPT.
 
 # First Milestone
 
