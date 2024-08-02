@@ -58,16 +58,77 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
-}
+import cv2
+import pytesseract
+from pytesseract import Output
+from picamera2 import MappedArray, Picamera2, Preview
+import openai
+openai.api_key = ""
 
-void loop() {
-  // put your main code here, to run repeatedly:
+ #preprocessing functions; unused for now
+def get_grayscale(image):
+    return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+ 
+ 
+def thresholding(image):
+    return cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
+ 
+ 
+def opening(image):
+    kernel = np.ones((5, 5), np.uint8)
+    return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+ 
+ 
+def canny(image):
+    return cv2.Canny(image, 100, 200)
 
-}
+#old cv2 code for legacy stack - leave commmented out
+#cap = cv2.VideoCapture(0)
+#cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+
+#picamera setup and configuration
+picam2 = Picamera2()
+picam2.configure(picam2.create_preview_configuration({"size": (1024, 768)}))
+picam2.start_preview(Preview.QTGL)
+picam2.start()
+ 
+while True:
+    # Capture frame-by-frame
+    #ret, frame = cap.read()
+    frame = picam2.capture_array()
+
+    #preprocessing options- unused for now
+    frame = get_grayscale(frame)
+    #thresh = thresholding(gray)
+    #opening = opening(gray)
+    #canny = canny(gray)
+    
+    #character recognition
+    d = pytesseract.image_to_data(frame, output_type=Output.DICT)
+    n_boxes = len(d['text'])
+    for i in range(n_boxes):
+        if int(d['conf'][i]) > 60:
+            (text, x, y, w, h) = (d['text'][i], d['left'][i], d['top'][i], d['width'][i], d['height'][i])
+            # don't show empty text
+            if text and text.strip() != "":
+                prompt = "Provide some infromation about", text
+                model = "text-davinci-003"
+                response = openai.Completion.create(engine=model, prompt=prompt, max_tokens=10)
+                generated_text = response.choices[0].text
+                print(generated_text)
+                frame = cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+                frame = cv2.putText(frame, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 255), 3)
+                cv2.imwrite("/home/ashwin/Downloads/OCR_Project"+str(i)+".png", frame) 
+            # i += 1
+ 
+    # Display the resulting frame
+    cv2.imshow('frame', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+ 
+# When everything done, release the capture
+#cap.release()
+cv2.destroyAllWindows()
 ```
 
 # Bill of Materials
