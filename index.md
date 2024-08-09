@@ -11,7 +11,7 @@ You should comment out all portions of your portfolio that you have not complete
 |:--:|:--:|:--:|:--:|
 | Ashwin J | Liberty High School | Computer Science | Incoming Freshmen
 
-![Headstone Image](logo.svg)
+![Headstone Image]()
   
 # Final Milestone
 
@@ -21,8 +21,8 @@ You should comment out all portions of your portfolio that you have not complete
 
 - What you've accomplished since your previous milestone: I have added the AI API and the speaker which allows the AI's output to be heard through text to speech.
 - What your biggest challenges and triumphs were at BSE: My biggest challenge was the IMX708 autofocus camera not working. The entire picture was blurry due to the autofocus not focusing.
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+- A summary of key topics you learned about: I have learned alot about the hardware side of engineering. I came into bluestamp with knowledge about coding, however, I didn't even know what a raspberry pi was. Through this program, I have learned a lot about engineering.
+- What you hope to learn in the future after everything you've learned at BSE: I hope to learn about the different aspects of engineering and the career paths associated with them.
 
 
 
