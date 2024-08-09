@@ -5,7 +5,7 @@ In this project, a camera sends its input to the Raspberry Pi system. From there
 |:--:|:--:|:--:|:--:|
 | Ashwin J | Liberty High School | Computer Science | Incoming Freshmen
 
-!((![IMG_2111](https://github.com/user-attachments/assets/35de68fc-93f4-49eb-9461-ac07c1246f11)
+(![IMG_2111](https://github.com/user-attachments/assets/35de68fc-93f4-49eb-9461-ac07c1246f11)
 
   
 # Final Milestone
