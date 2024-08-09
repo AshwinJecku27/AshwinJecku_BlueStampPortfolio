@@ -1,19 +1,15 @@
 # Optical Character Reader with Raspberry Pi and AI
 In this project, a camera sends its input to the Raspberry Pi system. From there, the image is analyzed and we get some data back. With this data, the computer can "read" the text in the camera input
 
-```HTML 
-```
-
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Ashwin J | Liberty High School | Computer Science | Incoming Freshmen
 
-![Headstone Image]((![IMG_2111](https://github.com/user-attachments/assets/35de68fc-93f4-49eb-9461-ac07c1246f11)
+!((![IMG_2111](https://github.com/user-attachments/assets/35de68fc-93f4-49eb-9461-ac07c1246f11)
 
   
 # Final Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yWRDrryKRAk?si=o18NmVZYP3fwyKko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
