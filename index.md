@@ -8,14 +8,14 @@ In this project, a camera sends its input to the Raspberry Pi system. From there
 |:--:|:--:|:--:|:--:|
 | Ashwin J | Liberty High School | Computer Science | Incoming Freshmen
 
-![Headstone Image](![IMG_2111](https://github.com/user-attachments/assets/35de68fc-93f4-49eb-9461-ac07c1246f11))
+![Headstone Image]((![IMG_2111](https://github.com/user-attachments/assets/35de68fc-93f4-49eb-9461-ac07c1246f11)
 
   
 # Final Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yWRDrryKRAk?si=o18NmVZYP3fwyKko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - What you've accomplished since your previous milestone: I have added the AI API and the speaker which allows the AI's output to be heard through text to speech.
 - What your biggest challenges and triumphs were at BSE: My biggest challenge was the IMX708 autofocus camera not working. The entire picture was blurry due to the autofocus not focusing.
