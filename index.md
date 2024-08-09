@@ -11,7 +11,7 @@ You should comment out all portions of your portfolio that you have not complete
 |:--:|:--:|:--:|:--:|
 | Ashwin J | Liberty High School | Computer Science | Incoming Freshmen
 
-![Headstone Image]()
+![Headstone Image](IMG_2111.jpg)
   
 # Final Milestone
 
